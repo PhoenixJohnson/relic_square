@@ -11,7 +11,7 @@ public class GenericResponse<T> {
 
     private String message;
 
-    private List<T> data;
+    private T data;
 
     public String getStatus() {
         return status;
@@ -29,11 +29,11 @@ public class GenericResponse<T> {
         this.message = message;
     }
 
-    public List<T> getData() {
+    public T getData() {
         return data;
     }
 
-    public void setData(List<T> data) {
+    public void setData(T data) {
         this.data = data;
     }
 }
