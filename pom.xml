@@ -7,7 +7,10 @@
     <groupId>com.relic</groupId>
     <artifactId>square</artifactId>
     <version>1.0-SNAPSHOT</version>
-    <packaging>war</packaging>
+    <modules>
+        <module>squareLib</module>
+    </modules>
+    <packaging>pom</packaging>
 
     <repositories>
         <repository>
