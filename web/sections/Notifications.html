@@ -1,0 +1,31 @@
+<!-- Notification Drawer -->
+<div id="notifications" class="tile drawer animated">
+    <div class="listview narrow" style="overflow:scroll;">
+        <div class="media">
+            <a href="">通知设定</a>
+            <span class="drawer-close">&times;</span>
+        </div>
+        <div class="overflow" style="height: 254px">
+            <div class="media" ng-repeat="noti in notis">
+                <div class="pull-left">
+                    <img width="40" src="../img/profile-pics/1.jpg" alt="">
+                </div>
+                <div class="media-body">
+                    <small class="text-muted">{{noti.publishTime}}</small>
+                    <br>
+
+                    <div class="block-title">{{noti.type}}</div>
+                    <br>
+                    <a>{{noti.title}}</a><br>
+                    <small class="t-overflow text-muted" href="">{{noti.content}}</small>
+                </div>
+            </div>
+        </div>
+
+        <div class="media text-center whiter l-100">
+            <a href="">
+                <small>查看全部</small>
+            </a>
+        </div>
+    </div>
+</div>

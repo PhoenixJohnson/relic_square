@@ -1,0 +1,35 @@
+<div class="modal-body animated fadeIn" ng-controller="LightboxCtrl"
+     ng-swipe-left="Lightbox.nextImage()"
+     ng-swipe-right="Lightbox.prevImage()">
+    <div class="row">
+        <div class="pull-right" style="display:flex;">
+            <a class="fa fa-share" href=""></a>
+        </div>
+    </div>
+
+    <!-- title -->
+    <div style="text-align: center;">
+        <h4>{{Lightbox.image.title}}</h4>
+    </div>
+    <div  style="text-align: center;">
+        <small>{{Lightbox.image.publishTime}}</small>
+    </div>
+    <a class="piro_prev" ng-click="Lightbox.prevImage()"></a>
+    <a class="piro_next" ng-click="Lightbox.nextImage()"></a>
+    <!-- image -->
+    <div class="lightbox-image-container ">
+
+        <img lightbox-src="{{Lightbox.imageUrl}}" alt="">
+
+    </div>
+
+    <!-- content -->
+
+    <div class="superbox-info">
+        <p class="m-b-20">{{Lightbox.image.shortDescription}}</p>
+        <a href="" class="btn btn-alt" title="">赞</a>
+        <a href="" class="btn btn-alt">评论</a>
+    </div>
+
+
+</div>

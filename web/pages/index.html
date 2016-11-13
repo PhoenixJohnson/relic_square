@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<!--[if IE 9 ]>
+<html class="ie9"><![endif]-->
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
+    <meta name="format-detection" content="telephone=no">
+    <meta charset="UTF-8">
+
+    <meta name="description" content="Violate Responsive Admin Template">
+    <meta name="keywords" content="Super Admin, Admin, Template, Bootstrap">
+
+    <title>消息圈 - 资讯由你而定</title>
+
+    <!-- CSS -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/animate.min.css" rel="stylesheet">
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <link href="../css/form.css" rel="stylesheet">
+    <link href="../css/photo-gallery.css" rel="stylesheet">
+    <link href="../css/lightbox.css" rel="stylesheet">
+    <link href="../css/style.css" rel="stylesheet">
+    <link href="../css/icons.css" rel="stylesheet">
+    <link href="../css/loading-bar.min.css" rel="stylesheet">
+
+    <link href="../css/jquery.fullPage.css" rel="stylesheet">
+    <link href="../css/generics.css" rel="stylesheet">
+
+</head>
+<body id="skin-blur-city" ng-class="$root.myTheme" ng-app="Cycle" ng-controller="HomeController">
+
+<!-- Older IE Message -->
+<!--[if lt IE 10]>
+<div class="ie-block">
+    <h1 class="Ops">糟糕</h1>
+
+    <p>你正在使用一个比较落后的浏览器，我们在这里向你推荐一下几款高性能浏览器。</p>
+    <ul class="browsers">
+        <li>
+            <a href="https://www.google.com/intl/en/chrome/browser/">
+                <img src="../img/browsers/chrome.png" alt="">
+
+                <div>Google Chrome</div>
+            </a>
+        </li>
+        <li>
+            <a href="http://www.mozilla.org/en-US/firefox/new/">
+                <img src="../img/browsers/firefox.png" alt="">
+
+                <div>Mozilla Firefox</div>
+            </a>
+        </li>
+        <li>
+            <a href="http://www.opera.com/computer/windows">
+                <img src="../img/browsers/opera.png" alt="">
+
+                <div>Opera</div>
+            </a>
+        </li>
+        <li>
+            <a href="http://safari.en.softonic.com/">
+                <img src="../img/browsers/safari.png" alt="">
+
+                <div>Safari</div>
+            </a>
+        </li>
+    </ul>
+    <p>为了您的安全和浏览的良好体验，请更新您的浏览器<br/>感谢您的参与...</p>
+</div>
+<![endif]-->
+<header id="header" class="">
+
+
+    <nav class="navbar navbar-default navbar-fixed-top" style="background: rgba(16, 16, 16, 0.44);">
+            <div class="navbar-header">
+                <a href="" id="menu-toggle"></a>
+                <a class="logo pull-left" href="#/qb">{{$root.ProjectName}}</a>
+                <button class="navbar-toggle collapsed" aria-expanded="false" data-target="#navbar"
+                        data-toggle="collapse" type="button">
+                    <span class="sr-only">Toggle navigation</span>
+                    <i class="fa fa-arrows-v"></i>
+
+                </button>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse" aria-expanded="false">
+                <ul class="nav navbar-nav" ng-hide="$root.authenticated">
+
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" aria-expanded="false" role="button" data-toggle="dropdown" style="background:transparent;display:table-row;">
+                            <img class="profile-pic animated" src="" alt="注册/登录">
+
+                            <!--<div class="top-text-content">{{userName}}</div>-->
+                            <span class="caret"></span>
+
+                        </a>
+                        <ul class="dropdown-menu profile-menu">
+                            <li><a href="" ng-click="signup()">注册</a> <i class="icon left">&#61903;</i><i
+                                    class="icon right">
+                                &#61815;</i>
+                            </li>
+                            <li><a href="/login">登陆</a> <i class="icon left">&#61903;</i><i class="icon right">
+                                &#61815;</i>
+                            </li>
+
+                        </ul>
+
+                    </li>
+                </ul>
+                <ul class="nav navbar-nav" ng-show="$root.authenticated">
+
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" aria-expanded="false" role="button" data-toggle="dropdown"
+                           style="background:transparent;display:table-row;">
+                            <img class="profile-pic animated" src="{{userPic}}" alt="">
+
+                            <!--<div class="top-text-content">{{userName}}</div>-->
+                            <span class="caret"></span>
+
+                        </a>
+                        <ul class="dropdown-menu profile-menu">
+                            <li><a href="">详细资料</a> <i class="icon left">&#61903;</i><i class="icon right">
+                                &#61815;</i>
+                            </li>
+                            <li><a href="">私信</a> <i class="icon left">&#61903;</i><i class="icon right">
+                                &#61815;</i>
+                            </li>
+                            <li><a href="">设置</a> <i class="icon left">&#61903;</i><i class="icon right">
+                                &#61815;</i>
+                            </li>
+                            <li><a ng-click="logout()" href="">登出</a> <i class="icon left">&#61903;</i><i
+                                    class="icon right">
+                                &#61815;</i>
+                            </li>
+                        </ul>
+
+                    </li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right" ng-show="$root.authenticated">
+                    <li>
+                        <div id="time" class="pull-right">
+                            <span id="hours"></span>
+                            :
+                            <span id="min"></span>
+                            :
+                            <span id="sec"></span>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="tm-icon">
+                            <a data-drawer="messages" class="drawer-toggle" href="">
+                                <i class="sa-top-message"></i>
+                                <i class="n-count animated">5</i>
+                            </a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="tm-icon">
+                            <a data-drawer="notifications" class="drawer-toggle" href="">
+                                <i class="sa-top-updates"></i>
+                                <i class="n-count animated">9</i>
+                            </a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="tm-icon">
+                            <a data-drawer="reviews" class="drawer-toggle" href="">
+                                <i class="sa-top-money"></i>
+                                <i class="n-count animated">9</i>
+                            </a>
+                        </div>
+                    </li>
+
+                </ul>
+            </div>
+    </nav>
+</header>
+
+
+<section id="main" class="p-relative" role="main">
+
+    <div ng-include="'../sections/SideMenu.html'"></div>
+
+    <!-- Content -->
+    <section id="content" class="container">
+
+
+        <div ng-include="'../sections/Messages.html'"></div>
+        <div ng-include="'../sections/Reviews.html'"></div>
+        <div ng-include="'../sections/Notifications.html'"></div>
+        <div ng-view></div>
+
+    </section>
+
+</section>
+
+
+<div class="clearfix"></div>
+
+
+<!-- Javascript Libraries -->
+<!-- jQuery -->
+<script src="../js/jquery.min.js"></script>
+<!-- jQuery Library -->
+<script src="../js/jquery-ui.min.js"></script>
+
+<!-- external tools -->
+<!-- fullpage -->
+<script type="text/javascript" src="../app/vendor/fullpage/jquery.slimscroll.min.js"></script>
+<script type="text/javascript" src="../app/vendor/fullpage/jquery.easings.min.js"></script>
+<script src="../app/vendor/fullpage/jquery.fullPage.min.js"></script>
+
+
+<!-- jQuery UI -->
+<script src="../js/jquery.easing.1.3.js"></script>
+<!-- jQuery Easing - Requirred for Lightbox + Pie Charts-->
+
+<!-- Bootstrap -->
+<script src="../js/bootstrap.min.js"></script>
+
+<!-- Map -->
+<script src="../js/maps/jvectormap.min.js"></script>
+<!-- jVectorMap main library -->
+<script src="../js/maps/usa.js"></script>
+<!-- USA Map for jVectorMap -->
+
+<!--  Form Related -->
+<script src="../js/icheck.js"></script>
+<!-- Custom Checkbox + Radio -->
+<!-- Media -->
+<script src="../js/superbox.min.js"></script>
+<!-- Photo Gallery -->
+
+<script src="../app/vendor/angular/angular.js"></script>
+
+<script src="../app/vendor/angular/angular-resource.js"></script>
+<script src="../app/vendor/angular/angular-route.js"></script>
+<script src="../app/vendor/angular/ngAnimate.js"></script>
+<script src="../app/vendor/angular/cookies.js"></script>
+<script src="../app/vendor/bootstrap/ui-bootstrap-0.12.0.tpl.min.js"></script>
+<script src="../app/vendor/angular/angular-touch.js"></script>
+<script src="../app/vendor/Loading/loading-bar.min.js"></script>
+<script src="../app/vendor/angular/angular-bootstrap-lightbox.js"></script>
+
+<!-- UX -->
+<script src="../js/scroll.min.js"></script>
+<!-- Custom Scrollbar -->
+
+<!-- Other -->
+<script src="../js/calendar.min.js"></script>
+<!-- Calendar -->
+<script src="../js/feeds.min.js"></script>
+<!-- News Feeds -->
+
+<!-- All JS functions -->
+<script src="../js/functions.js"></script>
+
+
+<script src="../app/app.js"></script>
+<script src="../app/config.js"></script>
+<script src="../app/services/services.js"></script>
+
+<!--Filter -->
+<script src="../app/filters/filters.js"></script>
+
+<!--Directives -->
+<script src="../app/directives/EventsDirective.js"></script>
+<script src="../app/directives/effectiveDirective.js"></script>
+<script src="../app/notificationManager.js"></script>
+
+
+<!--Controllers -->
+
+<script src="../app/controllers/HomeController.js"></script>
+<script src="../app/controllers/NewsController.js"></script>
+<script src="../app/controllers/LightBoxController.js"></script>
+<script src="../app/controllers/LoginController.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,222 @@
+<!-- Sidebar -->
+<aside id="sidebar">
+
+    <!-- Sidbar Widgets -->
+    <div class="side-widgets overflow" ng-show="false">
+        <!-- Profile Menu -->
+        <div class="text-center s-widget m-b-25 dropdown" id="profile-menu">
+            <a href="" data-toggle="dropdown">
+                <img class="profile-pic animated" src="../img/phoenix.png" alt="">
+            </a>
+            <ul class="dropdown-menu profile-menu">
+                <li><a href="">个人信息</a> <i class="icon left">&#61903;</i><i class="icon right">&#61815;</i>
+                </li>
+                <li><a href="">私信</a> <i class="icon left">&#61903;</i><i class="icon right">&#61815;</i>
+                </li>
+                <li><a href="">设置</a> <i class="icon left">&#61903;</i><i class="icon right">&#61815;</i>
+                </li>
+                <li><a href="">登出</a> <i class="icon left">&#61903;</i><i class="icon right">&#61815;</i>
+                </li>
+            </ul>
+            <h4 class="m-0">Phoenix Johnson</h4>
+            @Relic.com
+        </div>
+
+        <!-- Calendar -->
+        <!--<div class="s-widget m-b-25">-->
+        <!--<div id="sidebar-calendar"></div>-->
+        <!--</div>-->
+
+        <!-- Feeds -->
+        <!--<div class="s-widget m-b-25">-->
+        <!--<h2 class="tile-title">-->
+        <!--焦点-->
+        <!--</h2>-->
+
+        <!--<div class="s-widget-body">-->
+        <!--<div id="news-feed"></div>-->
+        <!--</div>-->
+        <!--</div>-->
+
+        <!--&lt;!&ndash; info sell &ndash;&gt;-->
+        <!--<div class="s-widget m-b-25">-->
+        <!--<h2 class="tile-title">-->
+        <!--您的审核信息-->
+        <!--</h2>-->
+
+        <!--<div class="s-widget-body">-->
+        <!--<div class="side-border">-->
+        <!--<small>网络经典神剧 - 信息站</small>-->
+        <!--<div class="progress progress-small">-->
+        <!--<a href="#" data-toggle="tooltip" title=""-->
+        <!--class="progress-bar tooltips progress-bar-danger"-->
+        <!--style="width: 60%;" data-original-title="60%">-->
+        <!--<span class="sr-only">60% Complete</span>-->
+        <!--</a>-->
+        <!--</div>-->
+        <!--</div>-->
+        <!--<div class="side-border">-->
+        <!--<small>男士试衣 - 信息站</small>-->
+        <!--<div class="progress progress-small">-->
+        <!--<a href="#" data-toggle="tooltip" title=""-->
+        <!--class="tooltips progress-bar progress-bar-info"-->
+        <!--style="width: 43%;" data-original-title="43%">-->
+        <!--<span class="sr-only">43% Complete</span>-->
+        <!--</a>-->
+        <!--</div>-->
+        <!--</div>-->
+        <!--<div class="side-border">-->
+        <!--<small>火星人出现地球 - 信闻头条</small>-->
+        <!--<div class="progress progress-small">-->
+        <!--<a href="#" data-toggle="tooltip" title=""-->
+        <!--class="tooltips progress-bar progress-bar-warning" style="width: 81%;"-->
+        <!--data-original-title="81%">-->
+        <!--<span class="sr-only">81% Complete</span>-->
+        <!--</a>-->
+        <!--</div>-->
+        <!--</div>-->
+        <!--<div class="side-border">-->
+        <!--<small>天上掉下个弼马温 - 信闻头条</small>-->
+        <!--<div class="progress progress-small">-->
+        <!--<a href="#" data-toggle="tooltip" title=""-->
+        <!--class="tooltips progress-bar progress-bar-success" style="width: 10%;"-->
+        <!--data-original-title="10%">-->
+        <!--<span class="sr-only">10% Complete</span>-->
+        <!--</a>-->
+        <!--</div>-->
+        <!--</div>-->
+        <!--<div class="side-border">-->
+        <!--<small>你懂得 - 信息站</small>-->
+        <!--<div class="progress progress-small">-->
+        <!--<a href="#" data-toggle="tooltip" title=""-->
+        <!--class="tooltips progress-bar progress-bar-success" style="width: 95%;"-->
+        <!--data-original-title="95%">-->
+        <!--<span class="sr-only">95% Complete</span>-->
+        <!--</a>-->
+        <!--</div>-->
+        <!--</div>-->
+        <!--</div>-->
+        <!--</div>-->
+    </div>
+
+    <!-- Side Menu -->
+    <ul class="list-unstyled side-menu">
+        <li>
+            <a class="sa-side-home" href="/qb">
+                <span class="menu-item">消息圈</span>
+            </a>
+        </li>
+        <li class="dropdown" ng-show="$root.authenticated">
+            <a class="sa-side-add" href="">
+                <span class="menu-item">发布</span>
+            </a>
+            <ul class="list-unstyled menu-item">
+                <li><a style="color:white">文字</a></li>
+                <li><a style="color:white">图片</a></li>
+                <li><a style="color:white">新闻</a></li>
+                <li><a style="color:white">信息站</a></li>
+                <li><a style="color:white">竞标</a></li>
+            </ul>
+        </li>
+        <li>
+            <a class="sa-side-reship" href="">
+                <span class="menu-item">转载</span>
+            </a>
+        </li>
+        <li>
+            <a class="sa-side-news" href="/weiNews" ng-click="pageControl('weiNews')">
+                <span class="menu-item">微新闻</span>
+            </a>
+        </li>
+        <li>
+            <a class="sa-side-infostation" href="/infoStation" ng-click="pageControl('infoStation')">
+                <span class="menu-item">信息站</span>
+            </a>
+        </li>
+        <li ng-show="$root.authenticated">
+            <a class="sa-side-belongs" href="/belongs" ng-click="pageControl('belongs')">
+                <span class="menu-item">归属圈</span>
+            </a>
+        </li>
+        <li class="dropdown">
+            <a class="sa-side-theme" href="">
+                <span class="menu-item">主题</span>
+            </a>
+            <ul class="list-unstyled menu-item">
+                <li><a ng-click="ThemeChange('violate')" style="color:white">暴力红</a></li>
+                <li><a ng-click="ThemeChange('lights')" style="color:white">炫光</a></li>
+                <li><a ng-click="ThemeChange('city')" style="color:white">都市</a></li>
+                <li><a ng-click="ThemeChange('greenish')" style="color:white">绿霓</a></li>
+                <li><a ng-click="ThemeChange('night')" style="color:white">夜景</a></li>
+                <li><a ng-click="ThemeChange('sunny')" style="color:white">阳光</a></li>
+                <li><a ng-click="ThemeChange('blue')" style="color:white">蓝调</a></li>
+                <li><a ng-click="ThemeChange('chrome')" style="color:white">镀铬</a></li>
+                <li><a ng-click="ThemeChange('ocean')" style="color:white">海洋</a></li>
+                <li><a ng-click="ThemeChange('sunset')" style="color:white">日落</a></li>
+                <li><a ng-click="ThemeChange('yellow')" style="color:white">玄黄</a></li>
+                <li><a ng-click="ThemeChange('kiwi')" style="color:white">鹬鸵</a></li>
+                <li><a ng-click="ThemeChange('nexus')" style="color:white">恋香</a></li>
+            </ul>
+        </li>
+
+        <!--<li class="dropdown">-->
+        <!--<a class="sa-side-form" href="">-->
+        <!--<span class="menu-item">Form</span>-->
+        <!--</a>-->
+        <!--<ul class="list-unstyled menu-item">-->
+        <!--<li><a href="../pages/form-elements.html">Basic Form Elements</a></li>-->
+        <!--<li><a href="../pages/form-components.html">Form Components</a></li>-->
+        <!--<li><a href="../pages/form-examples.html">Form Examples</a></li>-->
+        <!--<li><a href="../pages/form-validation.html">Form Validation</a></li>-->
+        <!--</ul>-->
+        <!--</li>-->
+        <!--<li class="dropdown">-->
+        <!--<a class="sa-side-ui" href="">-->
+        <!--<span class="menu-item">User Interface</span>-->
+        <!--</a>-->
+        <!--<ul class="list-unstyled menu-item">-->
+        <!--<li><a href="../pages/buttons.html">Buttons</a></li>-->
+        <!--<li><a href="../pages/labels.html">Labels</a></li>-->
+        <!--<li><a href="../pages/images-icons.html">Images &amp; Icons</a></li>-->
+        <!--<li><a href="../pages/alerts.html">Alerts</a></li>-->
+        <!--<li><a href="../pages/media.html">Media</a></li>-->
+        <!--<li><a href="../pages/components.html">Components</a></li>-->
+        <!--<li><a href="../pages/other-components.html">Others</a></li>-->
+        <!--</ul>-->
+        <!--</li>-->
+        <!--<li class="dropdown">-->
+        <!--<a class="sa-side-photos" href="">-->
+        <!--<span class="menu-item">PHOTO GALLERY</span>-->
+        <!--</a>-->
+        <!--<ul class="list-unstyled menu-item">-->
+        <!--<li><a href="../pages/photo-gallery.html">Google Images like</a></li>-->
+        <!--<li><a href="../pages/photo-gallery-alt.html">Photo Gallery - 2</a></li>-->
+        <!--</ul>-->
+        <!--</li>-->
+        <!--<li>-->
+        <!--<a class="sa-side-chart" href="../pages/charts.html">-->
+        <!--<span class="menu-item">Charts</span>-->
+        <!--</a>-->
+        <!--</li>-->
+        <!--<li>-->
+        <!--<a class="sa-side-folder" href="../pages/file-manager.html">-->
+        <!--<span class="menu-item">File Manager</span>-->
+        <!--</a>-->
+        <!--</li>-->
+        <!--<li>-->
+        <!--<a class="sa-side-calendar" href="../pages/calendar.html">-->
+        <!--<span class="menu-item">Calendar</span>-->
+        <!--</a>-->
+        <!--</li>-->
+        <li class="dropdown">
+            <a class="sa-side-page" href="">
+                <span class="menu-item">样例</span>
+            </a>
+            <ul class="list-unstyled menu-item">
+                <li><a href="/login">登陆界面</a></li>
+                <li><a href="../pages/404.html">404 页面</a></li>
+            </ul>
+        </li>
+    </ul>
+
+</aside>

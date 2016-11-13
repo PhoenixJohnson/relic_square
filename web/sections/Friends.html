@@ -1,0 +1,208 @@
+<!-- 好友圈 -->
+<h4 class="page-title">朋友圈</h4>
+
+<!--<div ng-include="'../sections/QuickKeys.html'"></div>-->
+
+<hr class="whiter"/>
+<div class="container" ng-class="$root.myAnimate">
+    <div class="row">
+        <div class="col-md-9">
+            <div class="listview list-container">
+                <header class="listview-header media">
+                    <!--<input type="checkbox" class="pull-left list-parent-check" value="">-->
+
+                    <ul class="list-inline pull-right m-t-5 m-b-0">
+                        <li class="pagin-value hidden-xs">35-70</li>
+                        <li>
+                            <a href="" title="上一页" class="tooltips">
+                                <i class="sa-list-back"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="" title="下一页" class="tooltips">
+                                <i class="sa-list-forwad"></i>
+                            </a>
+                        </li>
+                    </ul>
+
+                    <ul class="list-inline list-mass-actions pull-left">
+                        <li>
+                            <a data-toggle="modal" href="#compose-message" title="发布"
+                               class="tooltips">
+                                <i class="sa-list-add"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="" title="刷新" class="tooltips">
+                                <i class="sa-list-refresh"></i>
+                            </a>
+                        </li>
+
+                    </ul>
+
+                    <input class="input-sm col-md-4 pull-right message-search" type="text"
+                           placeholder="搜索....">
+
+                    <div class="clearfix"></div>
+                </header>
+
+
+                <div class="media" ng-repeat="record in records">
+                    <!--<input type="checkbox" class="pull-left list-check" checked={{record.checked}}>-->
+                    <img class="media-object pull-left" src="../img/profile-pics/2.jpg" alt=""
+                         width="45">
+
+                    <div class="media-body">
+                        {{record.messageTitle}}
+                        <div class="clearfix"></div>
+                        <small>{{record.messageContent}}</small>
+                        <br>
+
+                        <div class="block attrs">
+                            创建日期: {{record.createdDate}}
+                        </div>
+                        <div class="block attrs">
+                            赞: {{record.like}}
+                        </div>
+                        <div class="block attrs">
+                            踩: {{record.disLike}}
+                        </div>
+                        <div class="block attrs">
+                            版权: {{record.copyRight}}
+                        </div>
+                        <div class="block attrs">
+                            类型: {{record.messageType}}
+                        </div>
+                    </div>
+                    <div class="list-options">
+                        <button class="btn btn-alt btn-sm">评论({{record.comments}})</button>
+                        <button class="btn btn-alt btn-sm">关注</button>
+                        <button class="btn btn-alt btn-sm">转发</button>
+                    </div>
+                </div>
+
+
+                <div class="media text-center">
+                    <ul class="pagination">
+                        <li><a href="#"><i class="fa fa-angle-left"></i></a></li>
+                        <li><a href="#">1</a></li>
+                        <li><a href="#">2</a></li>
+                        <li><a href="#">3</a></li>
+                        <li><a href="#">4</a></li>
+                        <li><a href="#">5</a></li>
+                        <li><a href="#"><i class="fa fa-angle-right"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+            <!--  Recent Postings -->
+            <!--<div class="row">-->
+            <!--<div class="col-md-2">-->
+
+            <!--</div>-->
+            <!--<div class="col-md-8">-->
+
+
+            <!--</div>-->
+            <!--</div>-->
+            <div class="clearfix"></div>
+        </div>
+
+        <!-- right navigation area for ads or other notifications -->
+        <div class="col-md-3">
+            <div class="tile">
+                <h2 class="tile-title">最新</h2>
+
+                <div class="tile-config dropdown">
+                    <a data-toggle="dropdown" href="" class="tile-menu"></a>
+                    <ul class="dropdown-menu animated pull-right text-right">
+                        <li><a href="">简易</a></li>
+                        <li><a href="">详细</a></li>
+                    </ul>
+                </div>
+
+                <div class="listview narrow">
+                    <div class="media p-l-5">
+                        <div class="pull-left">
+                            <img width="40" src="../img/profile-pics/1.jpg" alt="">
+                        </div>
+                        <div class="media-body">
+                            <small class="text-muted">Alisa 发表于 2小时前</small>
+                            <br/>
+                            <a class="t-overflow" href="">明天下大雨，心情有点慌</a>
+
+                        </div>
+                    </div>
+                    <div class="media p-l-5">
+                        <div class="pull-left">
+                            <img width="40" src="../img/profile-pics/2.jpg" alt="">
+                        </div>
+                        <div class="media-body">
+                            <small class="text-muted">Phoenix 发表于 5小时前</small>
+                            <br/>
+                            <a class="t-overflow" href="">天天一看，包你发财</a>
+
+                        </div>
+                    </div>
+                    <div class="media p-l-5">
+                        <div class="pull-left">
+                            <img width="40" src="../img/profile-pics/3.jpg" alt="">
+                        </div>
+                        <div class="media-body">
+                            <small class="text-muted">Mitch 发表于 15/12/2017</small>
+                            <br/>
+                            <a class="t-overflow" href="">Great to meet new Chinese friend</a>
+
+                        </div>
+                    </div>
+                    <div class="media p-l-5">
+                        <div class="pull-left">
+                            <img width="40" src="../img/profile-pics/4.jpg" alt="">
+                        </div>
+                        <div class="media-body">
+                            <small class="text-muted">Berry 发表于 14/12/2017</small>
+                            <br/>
+                            <a class="t-overflow" href="">Cras pulvinar euismod nunc quis
+                                gravida. </a>
+
+                        </div>
+                    </div>
+                    <div class="media p-l-5">
+                        <div class="pull-left">
+                            <img width="40" src="../img/profile-pics/5.jpg" alt="">
+                        </div>
+                        <div class="media-body">
+                            <small class="text-muted">Jason 发表于 13/12/2017</small>
+                            <br/>
+                            <a class="t-overflow" href="">Integer a eros dapibus, vehicula quam
+                                accumsan,
+                                tincidunt purus</a>
+
+                        </div>
+                    </div>
+                    <div class="media p-5 text-center l-100">
+                        <a href="">
+                            <small>查看全部</small>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tile">
+                <h2 class="tile-title">即时通信</h2>
+
+                <div class="tile-config dropdown">
+                    <a data-toggle="dropdown" href="" class="tile-menu"></a>
+                    <ul class="dropdown-menu pull-right text-right">
+                        <li><a href="">Refresh</a></li>
+                        <li><a href="">Settings</a></li>
+                    </ul>
+                </div>
+
+
+            </div>
+
+
+        </div>
+        <div class="clearfix"></div>
+    </div>
+</div>

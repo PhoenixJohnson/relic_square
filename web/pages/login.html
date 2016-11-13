@@ -1,0 +1,67 @@
+<div class="animated fadeInDown" ng-init="init()">
+<section id="login">
+    <header>
+        <div class="col-lg-2 col-md-2 col-xs-2"></div>
+        <h1 class="col-lg-8 col-md-8 col-xs-8">{{$root.ProjectName}}</h1>
+
+        <div class="col-lg-2 col-md-2 col-xs-2"></div>
+        <!--<p>属于你的信息集散点</p>-->
+    </header>
+
+    <div class="clearfix"></div>
+    <div class="col-lg-2 col-md-2 col-xs-2"></div>
+    <div class="col-lg-8 col-md-8 col-xs-8">
+        <!-- Login -->
+        <form class="box tile animated active" id="box-login" ng-hide="$root.authenticated">
+            <h2 class="m-t-0 m-b-15">用户登录</h2>
+            <input type="text" class="login-control m-b-10" ng-model="username" placeholder="请输入用户名或者邮箱地址">
+            <input type="password" class="login-control" ng-model="password" placeholder="密码">
+            <!--<input type="hidden" name="_csrf" value="{{xsrf}}"/>-->
+
+            <div class="checkbox m-b-20">
+                <label>
+                    <input type="checkbox">
+                    记住我
+                </label>
+            </div>
+            <button ng-click="login()" class="btn btn-sm m-r-5">登陆</button>
+
+            <small>
+                <a class="box-switcher" data-switch="box-register" href="">还没有账户？</a> /
+                <a class="box-switcher" data-switch="box-reset" href="">忘记密码</a>
+            </small>
+        </form>
+        <p>this is the token: {{xsrf}}</p>
+
+        <!-- Register -->
+        <form class="box animated tile" id="box-register">
+            <h2 class="m-t-0 m-b-15">Register</h2>
+            <input type="text" class="login-control m-b-10" placeholder="用户名">
+            <input type="text" class="login-control m-b-10" placeholder="年龄">
+            <input type="email" class="login-control m-b-10" placeholder="E-mail地址">
+            <input type="password" class="login-control m-b-10" placeholder="密码">
+            <input type="password" class="login-control m-b-20" placeholder="密码确认">
+
+            <button class="btn btn-sm m-r-5">注册</button>
+
+            <small><a class="box-switcher" data-switch="box-login" href="">已经有注册账户？</a></small>
+        </form>
+
+        <!-- Forgot Password -->
+        <form class="box animated tile" id="box-reset">
+            <h2 class="m-t-0 m-b-15">重置密码</h2>
+
+            <p>请出入注册时所填写的邮箱地址以还原重置密码</p>
+            <input type="email" class="login-control m-b-20" placeholder="E-mail地址">
+
+            <button class="btn btn-sm m-r-5">重置密码</button>
+
+            <small><a class="box-switcher" data-switch="box-login" href="">已经有注册账户？</a></small>
+        </form>
+    </div>
+    <div class="col-lg-2 col-md-2 col-xs-2"></div>
+</section>
+
+
+</div>
+

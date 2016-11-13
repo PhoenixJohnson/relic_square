@@ -1,0 +1,62 @@
+<!-- 微新闻-->
+
+<h4 class="CHeader pull-left">微新闻</h4>
+
+<hr class="whiter"/>
+
+<div class="block-area" ng-class="$root.myAnimate" ng-controller="NewsController">
+
+    <div class="clearfix" style="">
+
+        <div class="superbox-list" ng-repeat="news in NewsList">
+            <div class="container tile">
+                <div class="row">
+                    <h5 class="m-t-10 m-l-20">{{news.title}}<a class="fa fa-share pull-right m-r-20" href=""></a></h5>
+                    <small class="m-t-10 m-l-20">{{news.publishTime}}</small>
+
+                </div>
+
+                <div class="row" ng-show="news.orgPics.length>1">
+                    <div class="tab-pane active">
+                        <div ng-repeat="pic in news.orgPics">
+                            <img src="{{pic.url}}" alt="" class="superbox-img"
+                                 ng-click="openLightboxModal(news,$index)"/>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <p class="m-t-10 m-l-20 m-r-20">{{news.shortDescription}}</p>
+                </div>
+                <ul class="nav tab nav-tabs row">
+                    <li><a href="">赞</a></li>
+                    <li><a href="">踩</a></li>
+                    <li><a href="">评论</a></li>
+                </ul>
+            </div>
+
+
+        </div>
+        <div class="superbox-float"></div>
+    </div>
+</div>
+
+<!--&lt;!&ndash; Javascript Libraries &ndash;&gt;-->
+<!--&lt;!&ndash; jQuery &ndash;&gt;-->
+<!--<script src="../js/jquery.min.js"></script> &lt;!&ndash; jQuery Library &ndash;&gt;-->
+
+<!--&lt;!&ndash; Media &ndash;&gt;-->
+<!--<script src="../js/superbox.min.js"></script> &lt;!&ndash; Photo Gallery &ndash;&gt;-->
+
+<!--&lt;!&ndash; UX &ndash;&gt;-->
+<!--<script src="../js/scroll.min.js"></script> &lt;!&ndash; Custom Scrollbar &ndash;&gt;-->
+
+<!--&lt;!&ndash; All JS functions &ndash;&gt;-->
+<!--<script src="../js/functions.js"></script>-->
+
+
+
+
+
+
+
+

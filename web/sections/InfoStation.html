@@ -1,0 +1,42 @@
+<!-- 信息站 -->
+<h4 class="CHeader pull-left">信息站</h4>
+
+<hr class="whiter"/>
+<div class="container" ng-class="$root.myAnimate">
+    <!-- 快捷键 -->
+
+    <!--<div ng-include="'../sections/QuickKeys.html'"></div>-->
+
+    <!--<hr class="whiter"/>-->
+    <div class="block-area">
+        <div class="col-lg-3 col-md-6 col-xs-12" ng-repeat="station in infoStations">
+            <div class="tile p-5 m-b-10">
+                <a target="_blank"
+                   href="">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-md-6 col-lg-6 col-xs-6"><img class="w-100" src={{station.picture}} alt=""></div>
+                            <div class="col-md-6 col-lg-6 col-xs-6">
+                                <div class="row">
+                                    <h5 class="w-100 t-overflow m-t-10 center-align">{{station.stationName}}</h5>
+                                </div>
+                                <div class="row">
+                                    <small class="w-100 t-overflow m-t-10 center-align" tooltip={{station.description}}>{{station.description}}</small>
+                                </div>
+                                <div class="row">
+                                    <small class="w-100 t-overflow m-t-10 center-align">收费信息{{station.feeOrNot}}</small>
+                                </div>
+                                <div class="row">
+                                    <button class="bt btn-alt m-t-10 pull-right">加入</button>
+                                    <button class="bt btn-alt m-t-10 pull-right">关注</button>
+                                    <button class="bt btn-alt m-t-10 pull-right">预览</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+    </div>
+  </div>
