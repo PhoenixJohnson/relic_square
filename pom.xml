@@ -57,6 +57,16 @@
             <artifactId>logback-classic</artifactId>
             <version>1.1.7</version>
         </dependency>
+        <dependency>
+            <groupId>org.springframework.security</groupId>
+            <artifactId>spring-security-config</artifactId>
+            <version>4.0.1.RELEASE</version>
+        </dependency>
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>servlet-api</artifactId>
+            <version>2.5</version>
+        </dependency>
     </dependencies>
 
 
@@ -81,7 +91,7 @@
                 <configuration>
                     <webResources>
                         <resource>
-                            <directory>web</directory>
+                            <directory>classpath:webapp</directory>
                         </resource>
                     </webResources>
                 </configuration>

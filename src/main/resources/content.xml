@@ -8,9 +8,18 @@
        <context:annotation-config />
        <mvc:annotation-driven />
        <aop:aspectj-autoproxy/>
+       <context:component-scan base-package="com.relic.square.config"/>
        <context:component-scan base-package="com.relic.square.controller"/>
        <context:component-scan base-package="com.relic.square.service" />
 
+
+       <mvc:resources mapping="/js/**" location="/js/" />
+       <mvc:resources mapping="/css/**" location="/css/" />
+       <mvc:resources mapping="/app/**" location="/app/" />
+       <mvc:resources mapping="/fonts/**" location="/fonts/" />
+       <mvc:resources mapping="/img/**" location="/img/" />
+       <mvc:resources mapping="/sections/**" location="/sections/" />
+       <mvc:resources mapping="/pages/**" location="/pages/" />
 
        <mvc:interceptors>
               <bean class="com.relic.square.interceptor.CoreInterceptor"></bean>
