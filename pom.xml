@@ -91,7 +91,7 @@
                 <configuration>
                     <webResources>
                         <resource>
-                            <directory>classpath:webapp</directory>
+                            <directory>src/main/webapp</directory>
                         </resource>
                     </webResources>
                 </configuration>
